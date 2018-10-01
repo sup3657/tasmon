@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+        <script src="../components/loader.js"></script>
+        <link rel="stylesheet" href="../components/loader.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/cssua.min.js"></script>
+        <script src="../js/app.js"></script>
+        <title>tasmon|タスク入力</title>
+    </head>
+<body id="newtask">
+
+<main>
+<!--タスク入力画面-->
+  <div data-role="page" id="FormPage" data-theme="t">
+      <header>
+      
+      </header>
+
+      <section data-role="content" id="FormTable">
+            <div id="form_box">
+            <p>タスク名：<input type ="text" id="form_name"></p>
+            </div>
+
+            <div id="form_box">
+            <p>期限日：<input type ="date" id="form_date"></p>
+            </div>
+
+            <div id="form_box">
+            <p>優先度：<select id="form_priority">
+                       <option value="" selected>--選択--</option>
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                     </select>
+            </p>
+            </div>
+
+            <div id="non">
+             <div id="form_txt">調子
+                 <input type ="text" id="form_condition" value="y" size=40>
+             </div>
+                    
+             <div id="form_txt">記録数
+                <input type="text" id="form_days" value="0" size=40>
+             </div>
+                    
+             <div id="form_txt">進化段階
+                <input type="text" id="form_level" value="1" size=40>
+             </div>
+
+             <input type ="time" id="form_time" value="23:59">
+
+            </div> 
+
+            <!--送信ボタン-->
+            <div id="Tbtn">
+            <input type="button" name="sub" onclick="sendForm();" value="完了">
+            </div>
+      </section>
+
+      <!-- フッター -->
+      <div data-role="footer" data-position="fixed" data-theme="e" id="foot" class="tab_area clearfix">
+      <ul>
+       <li><a href="../index.html"><img src="../img/buttom/bt_1.png" alt="ホーム"></a></li>
+       <li><a href="../ichiran/index.html" onclick="checkForm();"><img src="../img/buttom/bt_2.png" alt="タスク一覧"></a></li>
+       <li><img src="../img/buttom/bt_p3.png" alt="タスク入力"></a></li>
+       <li><a href="../kiroku/index.html" onclick="checkDate();"><img src="../img/buttom/bt_4.png" alt="日々記録"></a></li>
+       <li><a href="../collection/index.html" onclick="completeTask();"><img src="../img/buttom/bt_5.png" alt="コレクション"></a></li>
+      </ul>
+      </div>
+  </div>
+</main>
+</body>
+</html>
