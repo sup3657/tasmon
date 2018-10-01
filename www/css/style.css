@@ -162,7 +162,7 @@ animation:fuwafuwa 1s infinite linear alternate;
 
    	@-webkit-keyframes tasmon  {	  
        0%{	  }	  
-       25%{	    -webkit-transform:scale(.8,1.6);	  }	  
+       25%{	    -webkit-transform:scale(.8,1.4);	  }	  
        100%{	    -webkit-transform:scaleX(1.2,.5);	  }	
        }
 
@@ -171,7 +171,7 @@ animation:fuwafuwa 1s infinite linear alternate;
              	
    @-webkit-keyframes tasmon2{	  
         0%{	  }	  
-        25%{	    -webkit-transform:scale(1.8,.6);	  }	  
+        25%{	    -webkit-transform:scale(1.4,.6);	  }	  
         100%{	    -webkit-transform:scaleX(1.2,.5);	  }	
   }
 .tasmon3{
